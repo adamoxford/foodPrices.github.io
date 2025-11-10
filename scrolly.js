@@ -1,11 +1,9 @@
 // A simple scrollytelling implementation
 
 // Define the list of chart JSON files that correspond to the steps
-// '0': 'initial_cpi_chart.json'
-// '1': 'caption_1_chart.json'
 const chartSpecs = [
-    'initial_cpi_chart.json', // Corresponds to data-step="0"
-    'caption_1_chart.json'    // Corresponds to data-step="1"
+    'initial_cpi_chart_fixed.json', // Corresponds to data-step="0"
+    'caption_1_chart_fixed.json'    // Corresponds to data-step="1"
 ];
 
 const visElement = document.getElementById('vis');
@@ -34,7 +32,6 @@ async function updateChart(stepIndex) {
         const spec = await response.json();
 
         // Embed the new spec into the #vis container
-        // Use 'padding' to ensure labels aren't cut off
         const result = await vegaEmbed(visElement, spec, { actions: false, padding: 15 });
         
     } catch (error) {

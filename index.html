@@ -10,45 +10,54 @@
             background-color: #f0f0f0; /* Light grey page background */
             color: #333;
         }
+
+        /* The main container for the scrolly experience */
         #scrolly {
             position: relative;
-            display: grid;
-            grid-template-columns: 1fr 1.5fr; /* 1 part text, 1.5 parts chart */
-            gap: 20px;
-            max-width: 1200px;
-            margin: 2rem auto;
         }
+
+        /* The scrolling text content */
         #scrolly > article {
-            position: relative;
-            padding: 0 1rem;
+            position: relative; /* Must be relative to scroll over the sticky figure */
+            z-index: 10;      /* Sits on top of the chart */
         }
+
+        /* The sticky chart container */
         #scrolly > figure {
-            position: sticky; /* The chart will stick to the top */
-            top: 100px;
-            height: 550px; /* Give the chart container a fixed height */
-            margin: 0;
-        }
-        #vis {
+            position: sticky; /* This is the magic! */
+            top: 15vh;        /* Stick 15% from the top */
+            height: 70vh;     /* Chart takes up 70% of the viewport height */
             width: 100%;
+            margin: 0;
+            z-index: 1;       /* Sits behind the text */
+        }
+
+        /* The chart div itself */
+        #vis {
+            width: 90%;
             height: 100%;
-            /* The white background is set in the chart JSON, */
-            /* but we can set it here as a fallback. */
+            margin: 0 auto; /* Center the chart container */
             background-color: white; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             border-radius: 8px;
         }
+
+        /* The trigger area for each caption */
         .step {
-            min-height: 300px; /* Each step's trigger area */
-            margin-bottom: 200px; /* Space between steps */
-            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh; /* "One vertical width apart" */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center the caption */
+        }
+
+        /* The 'floating' caption box */
+        .step p {
+            max-width: 500px; /* Text box width */
+            margin: 0 auto;   /* Center the text box horizontally */
+            background-color: rgba(255, 255, 255, 0.95);
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .step:last-child {
-            margin-bottom: 50px;
-        }
-        .step p {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             font-size: 1.1rem;
             line-height: 1.6;
         }
@@ -60,6 +69,11 @@
 </head>
 <body>
     <section id="scrolly">
+        
+        <figure>
+            <div id="vis"></div>
+        </figure>
+
         <article>
             <div class="step" data-step="0">
                 <p>South Africa's inflation has seen significant shifts since 2021. This chart shows the quarterly year-on-year CPI for nine key indicators. By default, the main <strong>"All Items"</strong> CPI and overall <strong>"Food"</strong> inflation are highlighted.</p>
@@ -72,9 +86,6 @@
             </div>
         </article>
         
-        <figure>
-            <div id="vis"></div>
-        </figure>
     </section>
 
     <script src="scrolly.js"></script>
