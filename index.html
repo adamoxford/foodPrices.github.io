@@ -63,6 +63,29 @@
             font-size: 1.1rem;
             line-height: 1.6;
         }
+        
+        /* --- THIS IS THE NEW RESPONSIVE BLOCK --- */
+        @media (max-width: 600px) {
+          /* On mobile screens (600px wide or less),
+            these styles will override the ones above.
+          */
+          
+          /* Make the chart taller and move it up */
+          #scrolly > figure {
+            top: 10vh;      /* Stick closer to the top */
+            height: 80vh;  /* Make it taller (80% of viewport) */
+          }
+
+          /* Center text, make it larger and wider */
+          .step p {
+            max-width: 90%;   /* Use more of the screen */
+            margin-left: auto;  /* Center the block */
+            margin-right: auto;
+            font-size: 1.15rem; /* Slightly larger text */
+          }
+        }
+        /* --- END OF NEW BLOCK --- */
+        
     </style>
     <script src="https://cdn.jsdelivr.net/npm/d3@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
