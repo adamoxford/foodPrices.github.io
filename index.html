@@ -7,53 +7,48 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
-            background-color: #f0f0f0; /* Light grey page background */
+            background-color: #f0f0f0;
             color: #333;
         }
-
-        /* The main container for the scrolly experience */
         #scrolly {
             position: relative;
         }
-
-        /* The scrolling text content */
         #scrolly > article {
-            position: relative; /* Must be relative to scroll over the sticky figure */
-            z-index: 10;      /* Sits on top of the chart */
+            position: relative;
+            z-index: 10;
         }
-
-        /* The sticky chart container */
         #scrolly > figure {
-            position: sticky; /* This is the magic! */
-            top: 15vh;        /* Stick 15% from the top */
-            height: 70vh;     /* Chart takes up 70% of the viewport height */
+            position: sticky;
+            top: 15vh;
+            height: 70vh;
             width: 100%;
             margin: 0;
-            z-index: 1;       /* Sits behind the text */
+            z-index: 1;
         }
 
-        /* The chart div itself */
+        /* Updated for the <img> tag */
         #vis {
-            width: 90%;
-            height: 100%;
-            margin: 0 auto; /* Center the chart container */
+            /* This ensures the image scales proportionally */
+            max-width: 90%;
+            max-height: 100%;
+            margin: 0 auto;
+            display: block;
+            object-fit: contain; /* This is the key property */
+            
             background-color: white; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             border-radius: 8px;
         }
 
-        /* The trigger area for each caption */
         .step {
-            min-height: 100vh; /* "One vertical width apart" */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Vertically center the caption */
+            justify-content: center;
         }
-
-        /* The 'floating' caption box */
         .step p {
-            max-width: 500px; /* Text box width */
-            margin: 0 auto;   /* Center the text box horizontally */
+            max-width: 500px;
+            margin: 0 auto;
             background-color: rgba(255, 255, 255, 0.95);
             padding: 1.5rem;
             border-radius: 8px;
@@ -62,16 +57,13 @@
             line-height: 1.6;
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/d3@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-</head>
+    
+    </head>
 <body>
     <section id="scrolly">
         
         <figure>
-            <div id="vis"></div>
+            <img id="vis" src="chart_state_1.svg" alt="CPI Inflation Chart">
         </figure>
 
         <article>
@@ -82,7 +74,8 @@
                 <p>In <strong>December 2021</strong>, South Africa recorded a 5.5% year-on-year increase in food inflation. This was driven by above-inflation rises for <strong>Meat</strong> and <strong>Oils and fats</strong>.</p>
                 <p>As you scroll, the chart highlights these two specific categories, showing how they were outpacing the general food inflation basket at that time.</p>
             </div>
-            <div class="step" data-step="0"> <p>Scrolling past the specific events, we can again see the overall trend as we return to the initial view.</p>
+            <div class="step" data-step="0">
+                <p>Scrolling past the specific events, we can again see the overall trend as we return to the initial view.</p>
             </div>
         </article>
         
