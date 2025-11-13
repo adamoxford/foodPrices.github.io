@@ -45,7 +45,7 @@ green_indicators <- c("Meat", "Oils and fats")
 color_domain <- all_indicators
 color_range <- ifelse(
   all_indicators %in% green_indicators,
-  ifelse(all_indicators == "All Items", "#006400", "#990091"), # Dark greens
+  ifelse(all_indicators == "Meat", "#006400", "#990091"), # Dark greens
   "lightgrey"                                                  # Grey for all others
 )
 
@@ -133,6 +133,28 @@ layer_labels <- list(
     list(filter = "datum.Description == 'Meat' || datum.Description == 'Oils and fats'")
   )
 )
+
+# --- NEW: Layer 3, The Dots ---
+layer_dots <- list(
+  data = list(values = df_dots),
+  mark = list(type = "point", size = 100, filled = TRUE, stroke = "black", strokeWidth = 0.5),
+  encoding = list(
+    x = list(field = "Date", type = "temporal"),
+    y = list(field = "Value", type = "quantitative"),
+    color = list(
+      field = "Description",
+      type = "nominal",
+      scale = list(domain = color_domain, range = color_range),
+      legend = FALSE
+    ),
+    tooltip = list(
+      list(field = "Description", type = "nominal"),
+      list(field = "Date", type = "temporal", title = "Date", format = "%B %Y"),
+      list(field = "Value", type = "quantitative", title = "Inflation", format = ".1%")
+    )
+  )
+)
+
 
 # Combine the layers into the final specification
 vl_spec <- list(
