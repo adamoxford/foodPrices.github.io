@@ -6258,7 +6258,7 @@
         "dx": 5,
         "fontSize": 14,
         "dy": {
-          "expr": "datum.Description == 'All Items' ? -25 : 25"
+          "expr": "datum.Description == 'Food' ? -25 : 25"
         }
       },
       "encoding": {
