@@ -3136,9 +3136,9 @@
           "type": "nominal",
           "scale": {
             "domain": ["All Items", "Food", "Cereal products", "Meat", "Fish and other seafood", "Milk, other dairy products and eggs", "Oils and fats", "Fruits and nuts", "Vegetables"],
-            "range": ["#006400", "#228B22", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey"]
+            "range": ["#006400", "#990091", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey"]
           },
-          "legend": {}
+          "legend": false
         },
         "tooltip": [
           {
@@ -6256,9 +6256,9 @@
         "type": "text",
         "align": "left",
         "dx": 5,
-        "fontSize": 11,
+        "fontSize": 14,
         "dy": {
-          "expr": "datum.Description == 'All Items' ? -8 : 8"
+          "expr": "datum.Description == 'All Items' ? -25 : 25"
         }
       },
       "encoding": {
@@ -6279,9 +6279,9 @@
           "type": "nominal",
           "scale": {
             "domain": ["All Items", "Food", "Cereal products", "Meat", "Fish and other seafood", "Milk, other dairy products and eggs", "Oils and fats", "Fruits and nuts", "Vegetables"],
-            "range": ["#006400", "#228B22", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey"]
+            "range": ["#006400", "#990091", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey", "lightgrey"]
           },
-          "legend": {}
+          "legend": "null"
         },
         "text": {
           "field": "Description",

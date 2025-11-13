@@ -80,7 +80,7 @@ layer_lines <- list(
       field = "Description",
       type = "nominal",
       scale = list(domain = color_domain, range = color_range),
-      legend = NULL # No legend
+      legend = FALSE # No legend
     ),
     tooltip = list(
       list(field = "Description", type = "nominal"),
@@ -97,8 +97,8 @@ layer_labels <- list(
     type = "text",
     align = "left",
     dx = 5,
-    fontSize = 11,
-    dy = list(expr = "datum.Description == 'All Items' ? -8 : 8")
+    fontSize = 14,
+    dy = list(expr = "datum.Description == 'All Items' ? -25 : 25")
   ),
   encoding = list(
     # Find the last point in the full dataset
@@ -109,7 +109,7 @@ layer_labels <- list(
       field = "Description",
       type = "nominal",
       scale = list(domain = color_domain, range = color_range),
-      legend = NULL
+      legend = "null"
     ),
     # Set the text content
     text = list(field = "Description", type = "nominal")
@@ -136,6 +136,10 @@ vl_spec <- list(
     layer_labels
   )
 )
+
+print("Displaying chart preview...")
+print(vegawidget(vl_spec))
+
 
 # --- 7. Write JSON File ---
 write_json(
