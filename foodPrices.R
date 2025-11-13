@@ -112,7 +112,7 @@ layer_labels <- list(
     align = "left",
     dx = 5,
     fontSize = 14,
-    dy = list(expr = "datum.Description == 'All Items' ? -25 : 25")
+    dy = list(expr = "datum.Description == 'Oils and fats' ? -25 : 25")
   ),
   encoding = list(
     # Find the last point in the full dataset
@@ -130,7 +130,7 @@ layer_labels <- list(
   ),
   # Filter this layer to ONLY show the green labels
   transform = list(
-    list(filter = "datum.Description == 'All Items' || datum.Description == 'Food'")
+    list(filter = "datum.Description == 'Meat' || datum.Description == 'Oils and fats'")
   )
 )
 

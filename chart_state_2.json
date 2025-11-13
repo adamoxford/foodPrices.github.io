@@ -6258,7 +6258,7 @@
         "dx": 5,
         "fontSize": 14,
         "dy": {
-          "expr": "datum.Description == 'All Items' ? -25 : 25"
+          "expr": "datum.Description == 'Oils and fats' ? -25 : 25"
         }
       },
       "encoding": {
@@ -6290,7 +6290,7 @@
       },
       "transform": [
         {
-          "filter": "datum.Description == 'All Items' || datum.Description == 'Food'"
+          "filter": "datum.Description == 'Meat' || datum.Description == 'Oils and fats'"
         }
       ]
     }
