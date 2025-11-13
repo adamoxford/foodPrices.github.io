@@ -16,7 +16,7 @@ library(vegawidget)
 
 # --- 3. Configuration ---
 input_file <- "newCPIdata.csv"
-output_file <- "chart_state_1.json"
+output_file <- "chart_state_2.json"
 
 # --- 4. Load and Process Data ---
 # Load the raw data
@@ -40,7 +40,7 @@ df_clean <- df_raw %>%
 # --- 5. Define Chart Elements ---
 # Define the color mapping
 all_indicators <- unique(df_clean$Description)
-green_indicators <- c("All Items", "Food")
+green_indicators <- c("Meat", "Oils and fats")
 
 color_domain <- all_indicators
 color_range <- ifelse(
@@ -52,6 +52,20 @@ color_range <- ifelse(
 # Define axis limits
 min_date <- min(df_clean$Date)
 end_date <- "2025-11-01" # As a string
+
+# --- NEW: Pre-calculate the label positions ---
+# This is more robust than asking Vega-Lite to do it.
+df_labels <- df_clean %>%
+  group_by(Description) %>%
+  filter(Date == max(Date)) %>%
+  ungroup() %>%
+  # Filter for only the labels we want to show
+  filter(Description %in% green_indicators)
+
+# --- NEW: Pre-calculate the dot positions (Dec 2021) ---
+df_dots <- df_clean %>%
+  filter(Date == "2021-12-01") # Filter for Dec 2021
+
 
 # --- 6. Build the Vega-Lite Specification (as an R List) ---
 
