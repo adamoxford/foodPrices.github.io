@@ -6,7 +6,7 @@
   "background": "white",
   "title": {
     "text": "Monthly CPI Inflation Timeline",
-    "fontSize: "18"
+    "fontSize": "18"
   },
   "view": {
     "stroke": {}

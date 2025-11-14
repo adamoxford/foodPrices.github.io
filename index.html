@@ -9,7 +9,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
-            background-color: #f0f0f0; /* Light grey page background */
+            background-color: #ffffff; /* Light grey page background */
             color: #333;
         }
 
@@ -27,8 +27,8 @@
         /* The sticky chart container */
         #scrolly > figure {
             position: sticky; /* This is the magic! */
-            top: 15vh;        /* Stick 15% from the top */
-            height: 70vh;     /* Chart takes up 70% of the viewport height */
+            top: 1vh;        /* Stick 15% from the top */
+            height: 100vh;     /* Chart takes up 70% of the viewport height */
             width: 100%;
             margin: 0;
             z-index: 1;       /* Sits behind the text */
@@ -45,11 +45,14 @@
         }
 
         /* The trigger area for each caption */
-        .step {
-            min-height: 100vh; /* "One vertical width apart" */
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Vertically center the caption */
+                 .step {
+            /* We've removed min-height, display, flex-direction, and justify-content */
+            
+            /* This creates the 100vh gap *after* the text block */
+            margin-bottom: 100vh; 
+
+            /* This positions the text 25% down from the top of the screen */
+            padding-top: 25vh; 
         }
 
         /* The 'floating' caption box */
