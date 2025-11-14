@@ -5,7 +5,8 @@
   "height": "container",
   "background": "white",
   "title": {
-    "text": "Monthly CPI Inflation Timeline"
+    "text": "Monthly CPI Inflation Timeline",
+    "fontSize = "18"
   },
   "view": {
     "stroke": {}
@@ -3114,7 +3115,9 @@
           "title": "Date",
           "axis": {
             "format": "%Y-%m",
-            "grid": false
+            "grid": false,
+            "titleFontSize" = "14",
+            "labelFontSize" = "12"  
           },
           "scale": {
             "domain": [
@@ -3128,7 +3131,9 @@
           "type": "quantitative",
           "title": "Year-on-Year Inflation",
           "axis": {
-            "format": ".1%"
+            "format": ".1%",
+            "titleFontSize" = "14",
+            "labelFontSize" = "12"
           }
         },
         "color": {

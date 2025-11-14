@@ -81,14 +81,19 @@ layer_lines <- list(
       field = "Date", 
       type = "temporal", 
       title = "Date",
-      axis = list(format = "%Y-%m", grid = FALSE), # No vertical gridlines
+      axis = list(format = "%Y-%m", 
+                  grid = FALSE,
+                  titleFontSize = 14,
+                  labelFontSize = 12), # No vertical gridlines
       scale = list(domain = list(min_date, end_date)) 
     ),
     y = list(
       field = "Value", 
       type = "quantitative", 
       title = "Year-on-Year Inflation",
-      axis = list(format = ".1%")
+      axis = list(format = ".1%",
+                  titleFontSize = 14,
+                  labelFontSize = 12)
     ),
     color = list(
       field = "Description",
@@ -163,7 +168,8 @@ vl_spec <- list(
   width = "container",
   height = "container",
   background = "white",
-  title = list(text = "Monthly CPI Inflation Timeline"),
+  title = list(text = "Monthly CPI Inflation Timeline",
+               fontSize = 18),
   view = list(stroke = NULL),
   
   # Add the two layers
