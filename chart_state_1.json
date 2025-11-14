@@ -3132,8 +3132,8 @@
           "title": "Year-on-Year Inflation",
           "axis": {
             "format": ".1%",
-            "titleFontSize" = "14",
-            "labelFontSize" = "12"
+            "titleFontSize": "14",
+            "labelFontSize": "12"
           }
         },
         "color": {

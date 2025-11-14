@@ -3116,8 +3116,8 @@
           "axis": {
             "format": "%Y-%m",
             "grid": false,
-            "titleFontSize" = "14",
-            "labelFontSize" = "12"
+            "titleFontSize": "14",
+            "labelFontSize": "12"
           },
           "scale": {
             "domain": [
