@@ -3118,7 +3118,8 @@
             "format": "%Y-%m",
             "grid": false,
             "titleFontSize": "14",
-            "labelFontSize": "12"
+            "labelFontSize": "12",
+            
           },
           "scale": {
             "domain": [
@@ -3134,7 +3135,8 @@
           "axis": {
             "format": ".1%",
             "titleFontSize": "14",
-            "labelFontSize": "12"
+            "labelFontSize": "12",
+            "domain": false
           }
         },
         "color": {
