@@ -11,10 +11,6 @@
   "view": {
     "stroke": {}
   },
-  /* * ADD THIS PADDING BLOCK HERE
-   * It sits at the top level, as a sibling to 'width', 'title', 'layer', etc.
-   * 150px is a good starting point, but you can adjust it.
-   */
 
   "padding": { "top": 10, "bottom": 20, "left": 40, "right": 150 },
   
