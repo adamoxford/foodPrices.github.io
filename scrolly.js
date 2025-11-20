@@ -7,7 +7,7 @@ const chartSpecs = [
     'chart_state_3.json',
     'chart_state_4.json',
     'chart_state_5.json',
-    'chart_state_6.json
+    'chart_state_6.json'
 ];
 
 const visElement = document.getElementById('vis');
