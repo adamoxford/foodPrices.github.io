@@ -1,28 +1,50 @@
-# R Script to Generate chart_state_1.json from newCPIdata.csv
-# This version builds the JSON spec directly as an R list,
-# bypassing ggplot and ggvega to avoid conversion errors.
+---
+title: "South Africa Monthly CPI Inflation Analysis"
+output: html_document
+---
 
-# --- 1. Install Packages ---
-# Install packages if you don't have them
-#if(!require(tidyverse)) install.packages("tidyverse")
-#if(!require(lubridate)) install.packages("lubridate")
-#if(!require(jsonlite)) install.packages("jsonlite")
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-# --- 2. Load Libraries ---
+## 1. Install Packages
+
+Install necessary packages if they are not already present.
+
+```{r install_packages, eval=FALSE}
+if(!require(tidyverse)) install.packages("tidyverse")
+if(!require(lubridate)) install.packages("lubridate")
+if(!require(jsonlite)) install.packages("jsonlite")
+if(!require(vegawidget)) install.packages("vegawidget")
+```
+
+## 2. Load Libraries
+
+Load the required libraries for data manipulation and visualization.
+
+```{r load_libraries, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(lubridate)
 library(jsonlite)
 library(vegawidget) 
+```
 
-# --- 3. Configuration ---
+## 3. Configuration
+
+Set up input and output file paths.
+
+```{r configuration}
 input_file <- "newCPIdata.csv"
-output_file <- "chart_state_6.json"
+output_file <- "chart_state_5.json"
+```
 
-# --- 4. Load and Process Data ---
+## 4. Load and Process Data
+
+Read the raw CSV data, pivot it to a long format, and clean the values.
+
+```{r load_process_data}
 # Load the raw data
 df_raw <- read_csv(input_file, show_col_types = FALSE)
-
-
 
 # Pivot to long format and clean
 df_clean <- df_raw %>%
@@ -33,49 +55,55 @@ df_clean <- df_raw %>%
   ) %>%
   mutate(
     Value = as.numeric(str_replace(Value_str, "%", "")) / 100,
-    Date = parse_date_time(Date_str, "m/y"),
-    Description = ifelse(Description == "Milk, other dairy products and eggs", "Dairy", Description)
+    Date = parse_date_time(Date_str, "m/y")
   ) %>%
   drop_na(Value, Date) %>%
   # Format Date as "YYYY-MM-DD" for JSON compatibility
   mutate(Date = format(Date, "%Y-%m-%d"))
 
-# --- 5. Define Chart Elements ---
+head(df_clean)
+```
+
+## 5. Define Chart Elements
+
+Define color mappings, axis limits, and pre-calculate label and dot positions.
+
+```{r chart_elements}
 # Define the color mapping
 all_indicators <- unique(df_clean$Description)
-green_indicators <- c("Meat", "Vegetables", "Dairy")
+green_indicators <- c("Cereal products", "Oils and fats")
 
 color_domain <- all_indicators
 color_range <- ifelse(
-  all_indicators == "Meat", "#006400", 
-  ifelse(all_indicators == "Vegetables", "#990091",
-  ifelse(all_indicators == "Dairy", "#000064",
+  all_indicators %in% green_indicators,
+  ifelse(all_indicators == "Cereal products", "#006400", "#990091"), # Dark greens
   "lightgrey"                                                  # Grey for all others
-)))
+)
 
 # Define axis limits
 min_date <- min(df_clean$Date)
 end_date <- "2025-11-01" # As a string
 
-# --- NEW: Pre-calculate the label positions ---
-# This is more robust than asking Vega-Lite to do it.
+# --- Pre-calculate the label positions ---
 df_labels <- df_clean %>%
   group_by(Description) %>%
   filter(Date == max(Date)) %>%
   ungroup() %>%
   # Filter for only the labels we want to show
   filter(Description %in% green_indicators)
-# --- NEW: Pre-calculate the dot positions (Dec 2021) ---
+
+# --- Pre-calculate the dot positions (Dec 2021) ---
 df_dots <- df_clean %>%
-  filter(Date == "2025-08-01") # Filter for Dec 2021
+  filter(Date == "2024-12-01") # Filter for specific date
+```
 
+## 6. Build the Vega-Lite Specification
 
-# --- 6. Build the Vega-Lite Specification (as an R List) ---
+Construct the Vega-Lite specification as an R list.
 
-# This time, we build each layer as a complete object
-# to avoid ambiguity in the R previewer.
+### Layer 1: The Lines
 
-# Layer 1: The lines
+```{r layer_lines}
 layer_lines <- list(
   data = list(values = df_clean),
   mark = list(type = "line", point = FALSE), # No points
@@ -96,8 +124,7 @@ layer_lines <- list(
       title = "Year-on-Year Inflation",
       axis = list(format = ".1%",
                   titleFontSize = 14,
-                  labelFontSize = 12,
-                  domainOpacity = 0)
+                  labelFontSize = 12)
     ),
     color = list(
       field = "Description",
@@ -112,8 +139,11 @@ layer_lines <- list(
     )
   )
 )
+```
 
-# Layer 2: The labels
+### Layer 2: The Labels
+
+```{r layer_labels}
 layer_labels <- list(
   data = list(values = df_clean),
   mark = list(
@@ -121,7 +151,7 @@ layer_labels <- list(
     align = "left",
     dx = 5,
     fontSize = 14,
-    dy = list(expr = "datum.Description == 'Meat' ? 0 : 0 || datum.Description == 'Vegetables' ? 30 : 10")
+    dy = list(expr = "datum.Description == 'Cereal products' ? -30 : 25")
   ),
   encoding = list(
     # Find the last point in the full dataset
@@ -139,11 +169,14 @@ layer_labels <- list(
   ),
   # Filter this layer to ONLY show the green labels
   transform = list(
-    list(filter = "datum.Description == 'Vegetables' || datum.Description == 'Meat' || datum.Description == 'Dairy'")
+    list(filter = "datum.Description == 'Oils and fats' || datum.Description == 'Cereal products'")
   )
 )
+```
 
-# --- NEW: Layer 3, The Dots ---
+### Layer 3: The Dots
+
+```{r layer_dots}
 layer_dots <- list(
   data = list(values = df_dots),
   mark = list(type = "point", size = 100, filled = TRUE, stroke = "black", strokeWidth = 0.5),
@@ -163,8 +196,11 @@ layer_dots <- list(
     )
   )
 )
+```
 
+### Combine Layers
 
+```{r combine_layers}
 # Combine the layers into the final specification
 vl_spec <- list(
   `$schema` = "https://vega.github.io/schema/vega-lite/v5.json",
@@ -174,7 +210,7 @@ vl_spec <- list(
   background = "white",
   title = list(text = "Monthly CPI Inflation Timeline",
                fontSize = 18),
-  view = list(stroke = "transparent"),
+  view = list(stroke = NULL),
   
   # Add the two layers
   layer = list(
@@ -183,12 +219,17 @@ vl_spec <- list(
     layer_dots
   )
 )
+```
 
+## 7. Preview and Export
+
+Display the chart and write the JSON specification to a file.
+
+```{r preview_export}
 print("Displaying chart preview...")
-print(vegawidget(vl_spec))
+vegawidget(vl_spec)
 
-
-# --- 7. Write JSON File ---
+# Write JSON File
 write_json(
   vl_spec,
   output_file,
@@ -197,3 +238,4 @@ write_json(
 )
 
 print(paste("Successfully generated", output_file))
+```

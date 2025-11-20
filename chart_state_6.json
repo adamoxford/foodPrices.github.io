@@ -9,7 +9,7 @@
     "fontSize": 18
   },
   "view": {
-    "stroke": {}
+    "stroke": "transparent"
   },
   "layer": [
     {
@@ -1731,343 +1731,343 @@
             "Date": "2025-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "08/2021",
             "Value_str": "5.57%",
             "Value": 0.0557,
             "Date": "2021-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "09/2021",
             "Value_str": "5.57%",
             "Value": 0.0557,
             "Date": "2021-09-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "10/2021",
             "Value_str": "5.00%",
             "Value": 0.05,
             "Date": "2021-10-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "11/2021",
             "Value_str": "5.28%",
             "Value": 0.0528,
             "Date": "2021-11-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "12/2021",
             "Value_str": "5.28%",
             "Value": 0.0528,
             "Date": "2021-12-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "01/2022",
             "Value_str": "5.26%",
             "Value": 0.0526,
             "Date": "2022-01-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "02/2022",
             "Value_str": "4.69%",
             "Value": 0.0469,
             "Date": "2022-02-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "03/2022",
             "Value_str": "4.10%",
             "Value": 0.041,
             "Date": "2022-03-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "04/2022",
             "Value_str": "3.66%",
             "Value": 0.0366,
             "Date": "2022-04-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "05/2022",
             "Value_str": "3.73%",
             "Value": 0.0373,
             "Date": "2022-05-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "06/2022",
             "Value_str": "4.74%",
             "Value": 0.0474,
             "Date": "2022-06-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "07/2022",
             "Value_str": "5.38%",
             "Value": 0.0538,
             "Date": "2022-07-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "08/2022",
             "Value_str": "8.11%",
             "Value": 0.0811,
             "Date": "2022-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "09/2022",
             "Value_str": "9.01%",
             "Value": 0.0901,
             "Date": "2022-09-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "10/2022",
             "Value_str": "10.42%",
             "Value": 0.1042,
             "Date": "2022-10-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "11/2022",
             "Value_str": "10.81%",
             "Value": 0.1081,
             "Date": "2022-11-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "12/2022",
             "Value_str": "10.03%",
             "Value": 0.1003,
             "Date": "2022-12-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "01/2023",
             "Value_str": "10.76%",
             "Value": 0.1076,
             "Date": "2023-01-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "02/2023",
             "Value_str": "12.29%",
             "Value": 0.1229,
             "Date": "2023-02-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "03/2023",
             "Value_str": "13.60%",
             "Value": 0.136,
             "Date": "2023-03-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "04/2023",
             "Value_str": "14.52%",
             "Value": 0.1452,
             "Date": "2023-04-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "05/2023",
             "Value_str": "14.27%",
             "Value": 0.1427,
             "Date": "2023-05-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "06/2023",
             "Value_str": "14.06%",
             "Value": 0.1406,
             "Date": "2023-06-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "07/2023",
             "Value_str": "14.46%",
             "Value": 0.1446,
             "Date": "2023-07-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "08/2023",
             "Value_str": "12.02%",
             "Value": 0.1202,
             "Date": "2023-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "09/2023",
             "Value_str": "11.22%",
             "Value": 0.1122,
             "Date": "2023-09-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "10/2023",
             "Value_str": "12.47%",
             "Value": 0.1247,
             "Date": "2023-10-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "11/2023",
             "Value_str": "13.94%",
             "Value": 0.1394,
             "Date": "2023-11-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "12/2023",
             "Value_str": "14.49%",
             "Value": 0.1449,
             "Date": "2023-12-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "01/2024",
             "Value_str": "13.06%",
             "Value": 0.1306,
             "Date": "2024-01-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "02/2024",
             "Value_str": "11.97%",
             "Value": 0.1197,
             "Date": "2024-02-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "03/2024",
             "Value_str": "10.07%",
             "Value": 0.1007,
             "Date": "2024-03-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "04/2024",
             "Value_str": "8.71%",
             "Value": 0.0871,
             "Date": "2024-04-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "05/2024",
             "Value_str": "7.49%",
             "Value": 0.0749,
             "Date": "2024-05-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "06/2024",
             "Value_str": "7.29%",
             "Value": 0.0729,
             "Date": "2024-06-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "07/2024",
             "Value_str": "6.37%",
             "Value": 0.0637,
             "Date": "2024-07-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "08/2024",
             "Value_str": "6.80%",
             "Value": 0.068,
             "Date": "2024-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "09/2024",
             "Value_str": "6.79%",
             "Value": 0.0679,
             "Date": "2024-09-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "10/2024",
             "Value_str": "4.15%",
             "Value": 0.0415,
             "Date": "2024-10-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "11/2024",
             "Value_str": "2.14%",
             "Value": 0.0214,
             "Date": "2024-11-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "12/2024",
             "Value_str": "2.04%",
             "Value": 0.0204,
             "Date": "2024-12-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "01/2025",
             "Value_str": "1.74%",
             "Value": 0.0174,
             "Date": "2025-01-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "02/2025",
             "Value_str": "1.32%",
             "Value": 0.0132,
             "Date": "2025-02-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "03/2025",
             "Value_str": "0.61%",
             "Value": 0.0061,
             "Date": "2025-03-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "04/2025",
             "Value_str": "0.61%",
             "Value": 0.0061,
             "Date": "2025-04-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "05/2025",
             "Value_str": "0.30%",
             "Value": 0.003,
             "Date": "2025-05-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "06/2025",
             "Value_str": "-0.50%",
             "Value": -0.005,
             "Date": "2025-06-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "07/2025",
             "Value_str": "-0.80%",
             "Value": -0.008,
             "Date": "2025-07-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "08/2025",
             "Value_str": "-1.09%",
             "Value": -0.0109,
@@ -3133,15 +3133,16 @@
           "axis": {
             "format": ".1%",
             "titleFontSize": 14,
-            "labelFontSize": 12
+            "labelFontSize": 12,
+            "domainOpacity": 0
           }
         },
         "color": {
           "field": "Description",
           "type": "nominal",
           "scale": {
-            "domain": ["All Items", "Food", "Cereal products", "Meat", "Fish and other seafood", "Milk, other dairy products and eggs", "Oils and fats", "Fruits and nuts", "Vegetables"],
-            "range": ["lightgrey", "lightgrey", "#006400", "lightgrey", "lightgrey", "lightgrey", "#990091", "lightgrey", "lightgrey"]
+            "domain": ["All Items", "Food", "Cereal products", "Meat", "Fish and other seafood", "Dairy", "Oils and fats", "Fruits and nuts", "Vegetables"],
+            "range": ["lightgrey", "lightgrey", "lightgrey", "#006400", "lightgrey", "#000064", "lightgrey", "lightgrey", "#990091"]
           },
           "legend": false
         },
@@ -4884,343 +4885,343 @@
             "Date": "2025-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "08/2021",
             "Value_str": "5.57%",
             "Value": 0.0557,
             "Date": "2021-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "09/2021",
             "Value_str": "5.57%",
             "Value": 0.0557,
             "Date": "2021-09-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "10/2021",
             "Value_str": "5.00%",
             "Value": 0.05,
             "Date": "2021-10-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "11/2021",
             "Value_str": "5.28%",
             "Value": 0.0528,
             "Date": "2021-11-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "12/2021",
             "Value_str": "5.28%",
             "Value": 0.0528,
             "Date": "2021-12-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "01/2022",
             "Value_str": "5.26%",
             "Value": 0.0526,
             "Date": "2022-01-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "02/2022",
             "Value_str": "4.69%",
             "Value": 0.0469,
             "Date": "2022-02-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "03/2022",
             "Value_str": "4.10%",
             "Value": 0.041,
             "Date": "2022-03-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "04/2022",
             "Value_str": "3.66%",
             "Value": 0.0366,
             "Date": "2022-04-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "05/2022",
             "Value_str": "3.73%",
             "Value": 0.0373,
             "Date": "2022-05-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "06/2022",
             "Value_str": "4.74%",
             "Value": 0.0474,
             "Date": "2022-06-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "07/2022",
             "Value_str": "5.38%",
             "Value": 0.0538,
             "Date": "2022-07-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "08/2022",
             "Value_str": "8.11%",
             "Value": 0.0811,
             "Date": "2022-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "09/2022",
             "Value_str": "9.01%",
             "Value": 0.0901,
             "Date": "2022-09-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "10/2022",
             "Value_str": "10.42%",
             "Value": 0.1042,
             "Date": "2022-10-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "11/2022",
             "Value_str": "10.81%",
             "Value": 0.1081,
             "Date": "2022-11-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "12/2022",
             "Value_str": "10.03%",
             "Value": 0.1003,
             "Date": "2022-12-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "01/2023",
             "Value_str": "10.76%",
             "Value": 0.1076,
             "Date": "2023-01-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "02/2023",
             "Value_str": "12.29%",
             "Value": 0.1229,
             "Date": "2023-02-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "03/2023",
             "Value_str": "13.60%",
             "Value": 0.136,
             "Date": "2023-03-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "04/2023",
             "Value_str": "14.52%",
             "Value": 0.1452,
             "Date": "2023-04-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "05/2023",
             "Value_str": "14.27%",
             "Value": 0.1427,
             "Date": "2023-05-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "06/2023",
             "Value_str": "14.06%",
             "Value": 0.1406,
             "Date": "2023-06-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "07/2023",
             "Value_str": "14.46%",
             "Value": 0.1446,
             "Date": "2023-07-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "08/2023",
             "Value_str": "12.02%",
             "Value": 0.1202,
             "Date": "2023-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "09/2023",
             "Value_str": "11.22%",
             "Value": 0.1122,
             "Date": "2023-09-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "10/2023",
             "Value_str": "12.47%",
             "Value": 0.1247,
             "Date": "2023-10-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "11/2023",
             "Value_str": "13.94%",
             "Value": 0.1394,
             "Date": "2023-11-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "12/2023",
             "Value_str": "14.49%",
             "Value": 0.1449,
             "Date": "2023-12-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "01/2024",
             "Value_str": "13.06%",
             "Value": 0.1306,
             "Date": "2024-01-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "02/2024",
             "Value_str": "11.97%",
             "Value": 0.1197,
             "Date": "2024-02-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "03/2024",
             "Value_str": "10.07%",
             "Value": 0.1007,
             "Date": "2024-03-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "04/2024",
             "Value_str": "8.71%",
             "Value": 0.0871,
             "Date": "2024-04-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "05/2024",
             "Value_str": "7.49%",
             "Value": 0.0749,
             "Date": "2024-05-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "06/2024",
             "Value_str": "7.29%",
             "Value": 0.0729,
             "Date": "2024-06-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "07/2024",
             "Value_str": "6.37%",
             "Value": 0.0637,
             "Date": "2024-07-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "08/2024",
             "Value_str": "6.80%",
             "Value": 0.068,
             "Date": "2024-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "09/2024",
             "Value_str": "6.79%",
             "Value": 0.0679,
             "Date": "2024-09-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "10/2024",
             "Value_str": "4.15%",
             "Value": 0.0415,
             "Date": "2024-10-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "11/2024",
             "Value_str": "2.14%",
             "Value": 0.0214,
             "Date": "2024-11-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "12/2024",
             "Value_str": "2.04%",
             "Value": 0.0204,
             "Date": "2024-12-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "01/2025",
             "Value_str": "1.74%",
             "Value": 0.0174,
             "Date": "2025-01-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "02/2025",
             "Value_str": "1.32%",
             "Value": 0.0132,
             "Date": "2025-02-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "03/2025",
             "Value_str": "0.61%",
             "Value": 0.0061,
             "Date": "2025-03-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "04/2025",
             "Value_str": "0.61%",
             "Value": 0.0061,
             "Date": "2025-04-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "05/2025",
             "Value_str": "0.30%",
             "Value": 0.003,
             "Date": "2025-05-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "06/2025",
             "Value_str": "-0.50%",
             "Value": -0.005,
             "Date": "2025-06-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "07/2025",
             "Value_str": "-0.80%",
             "Value": -0.008,
             "Date": "2025-07-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
+            "Description": "Dairy",
             "Date_str": "08/2025",
             "Value_str": "-1.09%",
             "Value": -0.0109,
@@ -6263,7 +6264,7 @@
         "dx": 5,
         "fontSize": 14,
         "dy": {
-          "expr": "datum.Description == 'Cereal products' ? -30 : 25"
+          "expr": "datum.Description == 'Meat' ? 0 : 0 || datum.Description == 'Vegetables' ? 30 : 10"
         }
       },
       "encoding": {
@@ -6283,8 +6284,8 @@
           "field": "Description",
           "type": "nominal",
           "scale": {
-            "domain": ["All Items", "Food", "Cereal products", "Meat", "Fish and other seafood", "Milk, other dairy products and eggs", "Oils and fats", "Fruits and nuts", "Vegetables"],
-            "range": ["lightgrey", "lightgrey", "#006400", "lightgrey", "lightgrey", "lightgrey", "#990091", "lightgrey", "lightgrey"]
+            "domain": ["All Items", "Food", "Cereal products", "Meat", "Fish and other seafood", "Dairy", "Oils and fats", "Fruits and nuts", "Vegetables"],
+            "range": ["lightgrey", "lightgrey", "lightgrey", "#006400", "lightgrey", "#000064", "lightgrey", "lightgrey", "#990091"]
           },
           "legend": "null"
         },
@@ -6295,7 +6296,7 @@
       },
       "transform": [
         {
-          "filter": "datum.Description == 'Oils and fats' || datum.Description == 'Cereal products'"
+          "filter": "datum.Description == 'Vegetables' || datum.Description == 'Meat' || datum.Description == 'Dairy'"
         }
       ]
     },
@@ -6304,66 +6305,66 @@
         "values": [
           {
             "Description": "All Items",
-            "Date_str": "12/2024",
-            "Value_str": "2.99%",
-            "Value": 0.0299,
-            "Date": "2024-12-01"
+            "Date_str": "08/2025",
+            "Value_str": "3.30%",
+            "Value": 0.033,
+            "Date": "2025-08-01"
           },
           {
             "Description": "Food",
-            "Date_str": "12/2024",
-            "Value_str": "1.73%",
-            "Value": 0.0173,
-            "Date": "2024-12-01"
+            "Date_str": "08/2025",
+            "Value_str": "5.23%",
+            "Value": 0.0523,
+            "Date": "2025-08-01"
           },
           {
             "Description": "Cereal products",
-            "Date_str": "12/2024",
-            "Value_str": "3.73%",
-            "Value": 0.0373,
-            "Date": "2024-12-01"
+            "Date_str": "08/2025",
+            "Value_str": "1.49%",
+            "Value": 0.0149,
+            "Date": "2025-08-01"
           },
           {
             "Description": "Meat",
-            "Date_str": "12/2024",
-            "Value_str": "-0.40%",
-            "Value": -0.004,
-            "Date": "2024-12-01"
+            "Date_str": "08/2025",
+            "Value_str": "11.31%",
+            "Value": 0.1131,
+            "Date": "2025-08-01"
           },
           {
             "Description": "Fish and other seafood",
-            "Date_str": "12/2024",
-            "Value_str": "4.60%",
-            "Value": 0.046,
-            "Date": "2024-12-01"
+            "Date_str": "08/2025",
+            "Value_str": "2.79%",
+            "Value": 0.0279,
+            "Date": "2025-08-01"
           },
           {
-            "Description": "Milk, other dairy products and eggs",
-            "Date_str": "12/2024",
-            "Value_str": "2.04%",
-            "Value": 0.0204,
-            "Date": "2024-12-01"
+            "Description": "Dairy",
+            "Date_str": "08/2025",
+            "Value_str": "-1.09%",
+            "Value": -0.0109,
+            "Date": "2025-08-01"
           },
           {
             "Description": "Oils and fats",
-            "Date_str": "12/2024",
-            "Value_str": "2.25%",
-            "Value": 0.0225,
-            "Date": "2024-12-01"
+            "Date_str": "08/2025",
+            "Value_str": "4.80%",
+            "Value": 0.048,
+            "Date": "2025-08-01"
           },
           {
             "Description": "Fruits and nuts",
-            "Date_str": "12/2024",
-            "Value_str": "4.82%",
-            "Value": 0.0482,
-            "Date": "2024-12-01"
+            "Date_str": "08/2025",
+            "Value_str": "8.55%",
+            "Value": 0.0855,
+            "Date": "2025-08-01"
           },
           {
             "Description": "Vegetables",
-            "Date_str": "12/2024",
-            "Value_str": "0.50%",
-            "Value": 0.005,
-            "Date": "2024-12-01"
+            "Date_str": "08/2025",
+            "Value_str": "9.31%",
+            "Value": 0.0931,
+            "Date": "2025-08-01"
           }
         ]
       },
@@ -6387,8 +6388,8 @@
           "field": "Description",
           "type": "nominal",
           "scale": {
-            "domain": ["All Items", "Food", "Cereal products", "Meat", "Fish and other seafood", "Milk, other dairy products and eggs", "Oils and fats", "Fruits and nuts", "Vegetables"],
-            "range": ["lightgrey", "lightgrey", "#006400", "lightgrey", "lightgrey", "lightgrey", "#990091", "lightgrey", "lightgrey"]
+            "domain": ["All Items", "Food", "Cereal products", "Meat", "Fish and other seafood", "Dairy", "Oils and fats", "Fruits and nuts", "Vegetables"],
+            "range": ["lightgrey", "lightgrey", "lightgrey", "#006400", "lightgrey", "#000064", "lightgrey", "lightgrey", "#990091"]
           },
           "legend": false
         },
