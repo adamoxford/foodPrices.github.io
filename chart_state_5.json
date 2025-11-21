@@ -6264,7 +6264,7 @@
         "dx": 5,
         "fontSize": 14,
         "dy": {
-          "expr": "datum.Description == 'Oils and fats' ? -30 : 25"
+          "expr": "datum.Description == 'Oils and fats' ? 0 : 10"
         }
       },
       "encoding": {
