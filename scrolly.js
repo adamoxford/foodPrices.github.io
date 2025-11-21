@@ -2,6 +2,8 @@
 
 // Define the list of chart JSON files that correspond to the steps
 const chartSpecs = [
+    'chart_food_basket_minimal.json',
+    'chart_food_basket.json',
     'chart_state_1.json', // Corresponds to data-step="0"
     'chart_state_2.json',  // Corresponds to data-step="1"
     'chart_state_3.json',

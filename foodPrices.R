@@ -197,3 +197,164 @@ write_json(
 )
 
 print(paste("Successfully generated", output_file))
+
+
+
+## Food basket chart ##
+## This is a new bit of code for the food basket chart only ##
+
+input_file <- "foodBasketprice.csv"
+output_file <- "chart_food_basket.json"
+
+# --- 3. Load and Process Data ---
+df_raw <- read_csv(input_file, show_col_types = FALSE)
+
+# Clean data
+df_clean <- df_raw %>%
+  rename(
+    Date_str = `Year Month`,
+    Value = `Monthly price of a THFB`
+  ) %>%
+  mutate(
+    # Parse "01/04/21" format (Day/Month/Year)
+    Date = dmy(Date_str),
+    # Create the label text: "2021: R2942"
+    LabelText = paste0(year(Date), ": R", Value),
+    # --- FIX: Create a pre-formatted price for the tooltip ---
+    TooltipPrice = paste0("R", format(Value, big.mark = ",", scientific = FALSE))
+  ) %>%
+  drop_na(Value, Date) %>%
+  mutate(Date_fmt = format(Date, "%Y-%m-%d")) # For JSON
+
+# --- 4. Identify Start and End Points ---
+# We filter for the minimum and maximum dates to get the start/end points
+df_endpoints <- df_clean %>%
+  filter(Date == min(Date) | Date == max(Date))
+
+# --- 5. Build Vega-Lite Specification ---
+
+# Layer 1: The Line
+layer_line <- list(
+  data = list(values = df_clean),
+  mark = list(type = "line", point = FALSE),
+  encoding = list(
+    x = list(
+      field = "Date_fmt",
+      type = "temporal",
+      title = "Date",
+      axis = list(
+        format = "%Y",       # Show Years on X axis
+        grid = FALSE,
+        titleFontSize = 14,
+        labelFontSize = 12
+      )
+    ),
+    y = list(
+      field = "Value",
+      type = "quantitative",
+      title = "Cost of Food Basket (Rands)",
+      axis = list(
+        # Hide the Y-axis line and ticks, keep the text
+        domain = FALSE,      
+        ticks = FALSE,       
+        titleFontSize = 16,  
+        labelFontSize = 0,  
+        domainOpacity = 0
+      ),
+      # Ensure the Y axis doesn't start at 0 to show the trend better
+      scale = list(zero = FALSE) 
+    ),
+    color = list(value = "#228B22"), # "Food" Green color
+    tooltip = list(
+      list(field = "Date_fmt", type = "temporal", title = "Date", format = "%B %Y"),
+      list(field = "TooltipPrice", type = "nominal", title = "Price")
+    )
+  )
+)
+
+# Layer 2: The Dots (Start and End only)
+layer_dots <- list(
+  data = list(values = df_endpoints),
+  mark = list(
+    type = "point",
+    size = 100,
+    filled = TRUE,
+    color = "#228B22", # Match line color
+    stroke = "black",
+    strokeWidth = 0.5
+  ),
+  encoding = list(
+    x = list(field = "Date_fmt", type = "temporal"),
+    y = list(field = "Value", type = "quantitative")
+  )
+)
+
+# Layer 3: The Labels (Start and End only)
+layer_labels <- list(
+  data = list(values = df_endpoints),
+  mark = list(
+    type = "text",
+    align = "left",
+    fontSize = 18,
+    fontWeight = "bold",
+    # Conditional alignment:
+    # If date is '2021-04-01', align 'right' (push text to left of dot)
+    # Otherwise, align 'left' (push text to right of dot)
+    align = list(expr = "datum.Date_fmt == '2021-04-01' ? 'right' : 'left'"),
+    
+    # Conditional horizontal nudge (dx):
+    # If date is '2021-04-01', nudge -10 (left)
+    # Otherwise, nudge 10 (right)
+    dx = list(expr = "datum.Date_fmt == '2021-04-01' ? -10 : 10"),
+    
+    # --- NEW: Conditional vertical nudge (dy) ---
+    # If date is '2021-04-01', nudge -10 (UP)
+    # Otherwise, nudge 0 (default)
+    dy = list(expr = "datum.Date_fmt == '2021-04-01' ? -10 : -35")
+  ),
+  
+  encoding = list(
+    x = list(field = "Date_fmt", type = "temporal"),
+    y = list(field = "Value", type = "quantitative"),
+    text = list(field = "LabelText", type = "nominal")
+  )
+)
+
+layer_labels_halo <- layer_labels
+layer_labels_halo$mark$stroke <- "white"
+layer_labels_halo$mark$strokeWidth <- 4
+
+
+# Combine Layers
+vl_spec <- list(
+  `$schema` = "https://vega.github.io/schema/vega-lite/v5.json",
+  description = "Food Basket Price Trend",
+  width = "container",
+  height = "container",
+  background = "white",
+  title = list(
+    text = "Household Food Basket Price",
+    fontSize = 18
+  ),
+  view = list(stroke = "transparent"),
+  
+  # Padding to ensure labels fit
+  padding = list(top = 10, bottom = 20, left = 40, right = 80),
+  
+  layer = list(
+    layer_line,
+    layer_dots,
+    layer_labels_halo,
+    layer_labels
+  )
+)
+
+# --- 6. Save ---
+write_json(
+  vl_spec,
+  output_file,
+  auto_unbox = TRUE,
+  pretty = TRUE
+)
+
+print(paste("Successfully generated", output_file))

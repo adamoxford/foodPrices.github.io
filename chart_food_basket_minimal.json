@@ -1,0 +1,464 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Food Basket Price Trend (Minimal)",
+  "width": "container",
+  "height": "container",
+  "background": "white",
+  "view": {
+    "stroke": "transparent"
+  },
+  "padding": {
+    "top": 10,
+    "bottom": 10,
+    "left": 10,
+    "right": 10
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "Date_str": "01/04/21",
+            "Value": 2942,
+            "Date": "2021-04-01",
+            "TooltipPrice": "R2,942",
+            "Date_fmt": "2021-04-01"
+          },
+          {
+            "Date_str": "01/05/21",
+            "Value": 3007,
+            "Date": "2021-05-01",
+            "TooltipPrice": "R3,007",
+            "Date_fmt": "2021-05-01"
+          },
+          {
+            "Date_str": "01/07/21",
+            "Value": 2932,
+            "Date": "2021-07-01",
+            "TooltipPrice": "R2,932",
+            "Date_fmt": "2021-07-01"
+          },
+          {
+            "Date_str": "01/08/21",
+            "Value": 2939,
+            "Date": "2021-08-01",
+            "TooltipPrice": "R2,939",
+            "Date_fmt": "2021-08-01"
+          },
+          {
+            "Date_str": "01/09/21",
+            "Value": 2864,
+            "Date": "2021-09-01",
+            "TooltipPrice": "R2,864",
+            "Date_fmt": "2021-09-01"
+          },
+          {
+            "Date_str": "01/10/21",
+            "Value": 2931,
+            "Date": "2021-10-01",
+            "TooltipPrice": "R2,931",
+            "Date_fmt": "2021-10-01"
+          },
+          {
+            "Date_str": "01/12/21",
+            "Value": 2976,
+            "Date": "2021-12-01",
+            "TooltipPrice": "R2,976",
+            "Date_fmt": "2021-12-01"
+          },
+          {
+            "Date_str": "01/01/22",
+            "Value": 2997,
+            "Date": "2022-01-01",
+            "TooltipPrice": "R2,997",
+            "Date_fmt": "2022-01-01"
+          },
+          {
+            "Date_str": "01/02/22",
+            "Value": 3117,
+            "Date": "2022-02-01",
+            "TooltipPrice": "R3,117",
+            "Date_fmt": "2022-02-01"
+          },
+          {
+            "Date_str": "01/03/22",
+            "Value": 3092,
+            "Date": "2022-03-01",
+            "TooltipPrice": "R3,092",
+            "Date_fmt": "2022-03-01"
+          },
+          {
+            "Date_str": "01/04/22",
+            "Value": 3098,
+            "Date": "2022-04-01",
+            "TooltipPrice": "R3,098",
+            "Date_fmt": "2022-04-01"
+          },
+          {
+            "Date_str": "01/05/22",
+            "Value": 3172,
+            "Date": "2022-05-01",
+            "TooltipPrice": "R3,172",
+            "Date_fmt": "2022-05-01"
+          },
+          {
+            "Date_str": "01/06/22",
+            "Value": 3184,
+            "Date": "2022-06-01",
+            "TooltipPrice": "R3,184",
+            "Date_fmt": "2022-06-01"
+          },
+          {
+            "Date_str": "01/07/22",
+            "Value": 3261,
+            "Date": "2022-07-01",
+            "TooltipPrice": "R3,261",
+            "Date_fmt": "2022-07-01"
+          },
+          {
+            "Date_str": "01/08/22",
+            "Value": 3270,
+            "Date": "2022-08-01",
+            "TooltipPrice": "R3,270",
+            "Date_fmt": "2022-08-01"
+          },
+          {
+            "Date_str": "01/09/22",
+            "Value": 3288,
+            "Date": "2022-09-01",
+            "TooltipPrice": "R3,288",
+            "Date_fmt": "2022-09-01"
+          },
+          {
+            "Date_str": "01/10/22",
+            "Value": 3298,
+            "Date": "2022-10-01",
+            "TooltipPrice": "R3,298",
+            "Date_fmt": "2022-10-01"
+          },
+          {
+            "Date_str": "01/12/22",
+            "Value": 3352,
+            "Date": "2022-12-01",
+            "TooltipPrice": "R3,352",
+            "Date_fmt": "2022-12-01"
+          },
+          {
+            "Date_str": "01/01/23",
+            "Value": 3415,
+            "Date": "2023-01-01",
+            "TooltipPrice": "R3,415",
+            "Date_fmt": "2023-01-01"
+          },
+          {
+            "Date_str": "01/02/23",
+            "Value": 3504,
+            "Date": "2023-02-01",
+            "TooltipPrice": "R3,504",
+            "Date_fmt": "2023-02-01"
+          },
+          {
+            "Date_str": "01/03/23",
+            "Value": 3566,
+            "Date": "2023-03-01",
+            "TooltipPrice": "R3,566",
+            "Date_fmt": "2023-03-01"
+          },
+          {
+            "Date_str": "01/04/23",
+            "Value": 3603,
+            "Date": "2023-04-01",
+            "TooltipPrice": "R3,603",
+            "Date_fmt": "2023-04-01"
+          },
+          {
+            "Date_str": "01/05/23",
+            "Value": 3614,
+            "Date": "2023-05-01",
+            "TooltipPrice": "R3,614",
+            "Date_fmt": "2023-05-01"
+          },
+          {
+            "Date_str": "01/06/23",
+            "Value": 3582,
+            "Date": "2023-06-01",
+            "TooltipPrice": "R3,582",
+            "Date_fmt": "2023-06-01"
+          },
+          {
+            "Date_str": "01/07/23",
+            "Value": 3552,
+            "Date": "2023-07-01",
+            "TooltipPrice": "R3,552",
+            "Date_fmt": "2023-07-01"
+          },
+          {
+            "Date_str": "01/08/23",
+            "Value": 3524,
+            "Date": "2023-08-01",
+            "TooltipPrice": "R3,524",
+            "Date_fmt": "2023-08-01"
+          },
+          {
+            "Date_str": "01/09/23",
+            "Value": 3576,
+            "Date": "2023-09-01",
+            "TooltipPrice": "R3,576",
+            "Date_fmt": "2023-09-01"
+          },
+          {
+            "Date_str": "01/10/23",
+            "Value": 3643,
+            "Date": "2023-10-01",
+            "TooltipPrice": "R3,643",
+            "Date_fmt": "2023-10-01"
+          },
+          {
+            "Date_str": "01/11/23",
+            "Value": 3701,
+            "Date": "2023-11-01",
+            "TooltipPrice": "R3,701",
+            "Date_fmt": "2023-11-01"
+          },
+          {
+            "Date_str": "01/12/23",
+            "Value": 3695,
+            "Date": "2023-12-01",
+            "TooltipPrice": "R3,695",
+            "Date_fmt": "2023-12-01"
+          },
+          {
+            "Date_str": "01/01/24",
+            "Value": 3737,
+            "Date": "2024-01-01",
+            "TooltipPrice": "R3,737",
+            "Date_fmt": "2024-01-01"
+          },
+          {
+            "Date_str": "01/02/24",
+            "Value": 3734,
+            "Date": "2024-02-01",
+            "TooltipPrice": "R3,734",
+            "Date_fmt": "2024-02-01"
+          },
+          {
+            "Date_str": "01/03/24",
+            "Value": 3781,
+            "Date": "2024-03-01",
+            "TooltipPrice": "R3,781",
+            "Date_fmt": "2024-03-01"
+          },
+          {
+            "Date_str": "01/04/24",
+            "Value": 3812,
+            "Date": "2024-04-01",
+            "TooltipPrice": "R3,812",
+            "Date_fmt": "2024-04-01"
+          },
+          {
+            "Date_str": "01/05/24",
+            "Value": 3852,
+            "Date": "2024-05-01",
+            "TooltipPrice": "R3,852",
+            "Date_fmt": "2024-05-01"
+          },
+          {
+            "Date_str": "01/06/24",
+            "Value": 3795,
+            "Date": "2024-06-01",
+            "TooltipPrice": "R3,795",
+            "Date_fmt": "2024-06-01"
+          },
+          {
+            "Date_str": "01/07/24",
+            "Value": 3761,
+            "Date": "2024-07-01",
+            "TooltipPrice": "R3,761",
+            "Date_fmt": "2024-07-01"
+          },
+          {
+            "Date_str": "01/08/24",
+            "Value": 3771,
+            "Date": "2024-08-01",
+            "TooltipPrice": "R3,771",
+            "Date_fmt": "2024-08-01"
+          },
+          {
+            "Date_str": "01/09/24",
+            "Value": 3782,
+            "Date": "2024-09-01",
+            "TooltipPrice": "R3,782",
+            "Date_fmt": "2024-09-01"
+          },
+          {
+            "Date_str": "01/10/24",
+            "Value": 3789,
+            "Date": "2024-10-01",
+            "TooltipPrice": "R3,789",
+            "Date_fmt": "2024-10-01"
+          },
+          {
+            "Date_str": "01/11/24",
+            "Value": 3803,
+            "Date": "2024-11-01",
+            "TooltipPrice": "R3,803",
+            "Date_fmt": "2024-11-01"
+          },
+          {
+            "Date_str": "01/12/24",
+            "Value": 3833,
+            "Date": "2024-12-01",
+            "TooltipPrice": "R3,833",
+            "Date_fmt": "2024-12-01"
+          },
+          {
+            "Date_str": "01/01/25",
+            "Value": 3870,
+            "Date": "2025-01-01",
+            "TooltipPrice": "R3,870",
+            "Date_fmt": "2025-01-01"
+          },
+          {
+            "Date_str": "01/02/25",
+            "Value": 3889,
+            "Date": "2025-02-01",
+            "TooltipPrice": "R3,889",
+            "Date_fmt": "2025-02-01"
+          },
+          {
+            "Date_str": "01/03/25",
+            "Value": 3909,
+            "Date": "2025-03-01",
+            "TooltipPrice": "R3,909",
+            "Date_fmt": "2025-03-01"
+          },
+          {
+            "Date_str": "01/04/25",
+            "Value": 3957,
+            "Date": "2025-04-01",
+            "TooltipPrice": "R3,957",
+            "Date_fmt": "2025-04-01"
+          },
+          {
+            "Date_str": "01/05/25",
+            "Value": 3979,
+            "Date": "2025-05-01",
+            "TooltipPrice": "R3,979",
+            "Date_fmt": "2025-05-01"
+          },
+          {
+            "Date_str": "01/06/25",
+            "Value": 3988,
+            "Date": "2025-06-01",
+            "TooltipPrice": "R3,988",
+            "Date_fmt": "2025-06-01"
+          },
+          {
+            "Date_str": "01/07/25",
+            "Value": 3963,
+            "Date": "2025-07-01",
+            "TooltipPrice": "R3,963",
+            "Date_fmt": "2025-07-01"
+          },
+          {
+            "Date_str": "01/08/25",
+            "Value": 3898,
+            "Date": "2025-08-01",
+            "TooltipPrice": "R3,898",
+            "Date_fmt": "2025-08-01"
+          },
+          {
+            "Date_str": "01/09/25",
+            "Value": 3821,
+            "Date": "2025-09-01",
+            "TooltipPrice": "R3,821",
+            "Date_fmt": "2025-09-01"
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "point": false
+      },
+      "encoding": {
+        "x": {
+          "field": "Date_fmt",
+          "type": "temporal",
+          "axis": {
+            "domain" :false,
+            "grid" : false,
+            "labelFontSize": 0,
+            "titleFontSize" : 0
+          }
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "axis": {            
+            "domain" :false,
+            "ticks" : false,
+            "grid" : false,
+            "labelFontSize": 0,
+            "titleFontSize" : 0},
+          "scale": {
+            "zero": false
+          }
+        },
+        "color": {
+          "value": "#228B22"
+        },
+        "tooltip": [
+          {
+            "field": "Date_fmt",
+            "type": "temporal",
+            "title": "Date",
+            "format": "%B %Y"
+          },
+          {
+            "field": "TooltipPrice",
+            "type": "nominal",
+            "title": "Price"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Date_str": "01/04/21",
+            "Value": 2942,
+            "Date": "2021-04-01",
+            "TooltipPrice": "R2,942",
+            "Date_fmt": "2021-04-01"
+          },
+          {
+            "Date_str": "01/09/25",
+            "Value": 3821,
+            "Date": "2025-09-01",
+            "TooltipPrice": "R3,821",
+            "Date_fmt": "2025-09-01"
+          }
+        ]
+      },
+      "mark": {
+        "type": "point",
+        "size": 100,
+        "filled": true,
+        "color": "#228B22",
+        "stroke": "black",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "Date_fmt",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "Value",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}
