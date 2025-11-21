@@ -9,7 +9,9 @@
     "fontSize": 18
   },
   "view": {
-    "stroke": {}
+    "stroke": {
+      "stroke": "transparent"
+    }
   },
   "layer": [
     {
