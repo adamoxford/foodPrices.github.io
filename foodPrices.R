@@ -358,3 +358,113 @@ write_json(
 )
 
 print(paste("Successfully generated", output_file))
+
+
+
+
+
+## Create the basket chart with no labels ##
+
+# --- 2. Configuration ---
+input_file <- "foodBasketprice.csv"
+output_file <- "chart_food_basket_minimal.json"
+
+# --- 3. Load and Process Data ---
+df_raw <- read_csv(input_file, show_col_types = FALSE)
+
+# Clean data
+df_clean <- df_raw %>%
+  rename(
+    Date_str = `Year Month`,
+    Value = `Monthly price of a THFB`
+  ) %>%
+  mutate(
+    Date = dmy(Date_str),
+    # Tooltip formatting
+    TooltipPrice = paste0("R", format(Value, big.mark = ",", scientific = FALSE))
+  ) %>%
+  drop_na(Value, Date) %>%
+  mutate(Date_fmt = format(Date, "%Y-%m-%d")) 
+
+# --- 4. Identify Start and End Points ---
+df_endpoints <- df_clean %>%
+  filter(Date == min(Date) | Date == max(Date))
+
+# --- 5. Build Vega-Lite Specification ---
+
+# Layer 1: The Line
+layer_line <- list(
+  data = list(values = df_clean),
+  mark = list(type = "line", point = FALSE),
+  encoding = list(
+    x = list(
+      field = "Date_fmt",
+      type = "temporal",
+      # --- CHANGE: Remove Axis ---
+      axis = NULL 
+    ),
+    y = list(
+      field = "Value",
+      type = "quantitative",
+      # --- CHANGE: Remove Axis ---
+      axis = NULL,
+      scale = list(zero = FALSE) 
+    ),
+    color = list(value = "#228B22"), 
+    tooltip = list(
+      list(field = "Date_fmt", type = "temporal", title = "Date", format = "%B %Y"),
+      list(field = "TooltipPrice", type = "nominal", title = "Price")
+    )
+  )
+)
+
+# Layer 2: The Dots (Start and End only)
+layer_dots <- list(
+  data = list(values = df_endpoints),
+  mark = list(
+    type = "point",
+    size = 100,
+    filled = TRUE,
+    color = "#228B22", 
+    stroke = "black",
+    strokeWidth = 0.5
+  ),
+  encoding = list(
+    x = list(field = "Date_fmt", type = "temporal"),
+    y = list(field = "Value", type = "quantitative")
+  )
+)
+
+# --- REMOVED Layer 3 (Labels) & Layer 3b (Halo) ---
+
+# Combine Layers
+vl_spec <- list(
+  `$schema` = "https://vega.github.io/schema/vega-lite/v5.json",
+  description = "Food Basket Price Trend (Minimal)",
+  width = "container",
+  height = "container",
+  background = "white",
+  # --- CHANGE: Remove Title ---
+  # title = list(...), 
+  
+  view = list(stroke = "transparent"),
+  
+  # --- CHANGE: Reduce Padding (no labels to accommodate) ---
+  padding = list(top = 10, bottom = 10, left = 10, right = 10),
+  
+  layer = list(
+    layer_line,
+    layer_dots
+    # Label layers removed
+  )
+)
+
+# --- 6. Save ---
+write_json(
+  vl_spec,
+  output_file,
+  auto_unbox = TRUE,
+  pretty = TRUE
+)
+
+print(paste("Successfully generated", output_file))
