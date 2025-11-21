@@ -13,9 +13,9 @@
   },
   "padding": {
     "top": 10,
-    "bottom": 20,
-    "left": 40,
-    "right": 80
+    "bottom": 10,
+    "left": 10,
+    "right": 10
   },
   "layer": [
     {
